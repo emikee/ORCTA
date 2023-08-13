@@ -135,8 +135,15 @@ p.center {
     color: var(--white);
     transform: scale(0.95);
 }
-
-
+.tablet {
+    display: none;
+}
+.desktop {
+    display: block;
+}
+.mobile {
+    display: none;
+}
 /*--------end of styles------------*/
 
 
@@ -289,6 +296,7 @@ p.center {
     display: flex;
     gap: 2rem;
     background: url(Images/about-nav-bg.jpg);
+    background-size: cover;
     min-height: 34rem;
 }
 .about-us__tabs {
@@ -578,6 +586,16 @@ to {opacity: 1;}
     body {
         font-size: 1.0625rem;
     }
+    .section {
+        padding: 0rem 7rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        align-self: stretch;
+        z-index: 0;
+        position: relative;
+        width: 100%;
+    }
 }
  
 /* For Tablet View */
@@ -585,6 +603,56 @@ to {opacity: 1;}
     body {
         font-size: 1rem;
     }
+    .tablet {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+    .section {
+        padding: 0rem 3rem;
+    }
+    .full-box {
+        padding: 2rem;
+    }
+    .split-box {
+        padding: 2rem;  
+    }
+    .nav-links {
+        min-width: 0rem;
+    }
+    .nav-bar {
+        width: 100vw;
+        border-radius: 0;
+        top: 0;
+    }
+    .hero-title {
+        width: 100%;
+    }
+    .event-banner__content {
+        width: 100%;
+    }
+    .service-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .split-box.youth-image {
+        background-position: center;
+    }
+    .service-content.active {
+        height: auto;
+    }
+    .join-team {
+        gap: 3.5rem;
+    }
+    .join-text {
+        width: 60%;
+        padding: 0rem;
+    }
+    .join-contact {
+        width: 40%;
+    }
+
 }
  
 /* For Mobile Portrait View */
@@ -592,11 +660,137 @@ to {opacity: 1;}
     body {
         font-size: 1rem;
     }
+    .tablet {
+        display: none;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    } 
+    .section {
+        padding: 0rem 1rem;
+    }
+    .full-box {
+        padding: 1rem;
+    }
+    .split-box {
+        padding: 1rem;  
+        min-height: 50vh;
+    }
+    .split-box-wrapper{
+        flex-direction: column;
+    }
+    .nav-links {
+        min-width: 0rem;
+    }
+    .nav-link {
+        display: none;
+    }
+    .nav-bar {
+        width: 100vw;
+        border-radius: 0;
+        top: 0;
+    }
+    .hero-title {
+        width: 100%;
+    }
+    .service-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .split-box.about-us__nav {
+        min-height: 25rem;
+    }
+    .event-banner__content {
+        width: 100%;
+    }
+    .split-box.youth-image {
+        background-position: center;
+    }
+    .service-content.active {
+        height: auto;
+    }
+    .join-team {
+        gap: 3.5rem;
+        flex-direction: column;
+    }
+    .join-text {
+        width: 100%;
+        padding: 2rem 0rem 0rem 0rem;
+    }
+    .join-contact {
+        width: 100%;
+    }
 }
  
 /* For Mobile Landscape View */
-@media screen and (max-device-width: 640px)and (orientation: landscape) {
+@media screen and (max-device-width: 767px) {
     body {
         font-size: 0.9375rem;
+    }
+    .tablet {
+        display: none;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    } 
+    .section {
+        padding: 0rem 1rem;
+    }
+    .full-box {
+        padding: 1rem;
+    }
+    .split-box {
+        padding: 1rem;  
+        min-height: 50vh;
+    }
+    .split-box-wrapper{
+        flex-direction: column;
+    }
+    .nav-links {
+        min-width: 0rem;
+    }
+    .nav-link {
+        display: none;
+    }
+    .nav-bar {
+        width: 100vw;
+        border-radius: 0;
+        top: 0;
+    }
+    .hero-title {
+        width: 100%;
+    }
+    .service-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .split-box.about-us__nav {
+        min-height: 25rem;
+    }
+    .event-banner__content {
+        width: 100%;
+    }
+    .split-box.youth-image {
+        background-position: center;
+    }
+    .service-content.active {
+        height: auto;
+    }
+    .join-team {
+        gap: 3.5rem;
+        flex-direction: column;
+    }
+    .join-text {
+        width: 100%;
+        padding: 2rem 0rem 0rem 0rem;
+    }
+    .join-contact {
+        width: 100%;
     }
 }
