@@ -288,7 +288,7 @@ p.center {
     color: var(--white);
     display: flex;
     gap: 2rem;
-    background: url(/Images/about-nav-bg.jpg);
+    background: url(Images/about-nav-bg.jpg);
     min-height: 34rem;
 }
 .about-us__tabs {
