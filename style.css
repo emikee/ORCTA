@@ -179,7 +179,7 @@ p.center {
     padding: 3.5rem;
 }
 .full-box.hero {
-    background: linear-gradient(180deg, rgba(78, 93, 224, 0.24) 0%, rgba(54, 69, 200, 0.60) 65.63%), url("/Images/hero-img.jpg");
+    background: linear-gradient(180deg, rgba(78, 93, 224, 0.24) 0%, rgba(54, 69, 200, 0.60) 65.63%), url("Images/hero-img.jpg");
     background-position: bottom;
     background-size: cover;
     display: flex;
