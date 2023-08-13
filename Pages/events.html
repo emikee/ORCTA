@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="/style.css">
+    <title>Events</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="nav-bar">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <a href="/home.html">Home</a>
+                    <!-- <div class="hover-ball"></div> -->
+                </li>
+                <li class="nav-link">
+                    <a href="/Pages/events.html">Events</a>
+                    <!-- <div class="hover-ball"></div> -->
+                </li>
+                <li class="nav-link">
+                    <a href="/home.html"><img src="/Logo/Full Typelogo White.svg"/></a>
+                    <!-- <div class="hover-ball"></div> -->
+                </li>
+                <li class="nav-link">
+                    <a href="/Pages/team.html">Our Team</a>
+                    <a href="/Pages/gallery.html">Gallery</a>
+                    <!-- <div class="hover-ball"></div> -->
+                </li>
+
+            </ul>
+        </div>
+        <div class="section">
+            <div class="full-box hero">
+                <!-- top box content -->
+                <div class="bg-img">
+                    <div class="hero-overlay"></div>
+                </div>
+                <h1 class="hero-title">Events</h1>
+            </div>
+            <div class="split-box-wrapper events">
+                <div class="split-box calendar">
+                    <h1 class="calendar-title">Calendar</h2>
+                    <iframe class="event-calendar" src="https://calendar.google.com/calendar/embed?src=fad6973734ded43fadcd2d684693b6dc7f6aa8e5f82e4d3cf7120b3d00d36c54%40group.calendar.google.com&amp;ctz=America%2FLos_Angeles" style="border: 0" height="460" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="split-box events">
+                    <h1 class="event-title">Upcoming Events</h1>
+                    <div id="loader">
+                    </div>
+                    <div id="allNames">
+                    </div>
+                    <div id="errorMessage"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/events.js"></script>
+</body>
+</html>
