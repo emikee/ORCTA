@@ -109,6 +109,7 @@ h3 {
 }
 .center {
     align-items: center;
+    text-align: center;
 }
 p.center {
     text-align: center;
@@ -226,6 +227,15 @@ p.center {
     align-items: center;
     overflow: hidden;
 }
+.hamburger-menu {
+    display: none;
+}
+.hamburger {
+    display: none;
+}
+.close-menu {
+    display: none;
+}
 .nav-links {
     display: flex;
     min-width: 53rem;
@@ -242,6 +252,7 @@ p.center {
     display: flex;
     gap: 3rem;
     justify-content: center;
+    align-items: center;
 }
 .nav-link a{
     cursor: pointer;
@@ -275,7 +286,6 @@ p.center {
     position: relative;
     top: 0.2rem;
 }
-
 
 /* hero banner adjustments*/
 .hero-title {
@@ -365,9 +375,14 @@ p.center {
 .split-box.services {
     gap: 1.5rem;
 }
-.split-box.youth-image{
-    background: url("Images/kidstennis.jpeg");
-    background-size: cover;
+.img-content{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+.img-content.active {
+    display: block;
 }
 .service-tabs {
     display: flex;
@@ -590,7 +605,7 @@ to {opacity: 1;}
         padding: 0rem 7rem;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 4rem;
         align-self: stretch;
         z-index: 0;
         position: relative;
@@ -651,6 +666,12 @@ to {opacity: 1;}
     }
     .join-contact {
         width: 40%;
+    }
+    .event-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
     }
 
 }
@@ -740,7 +761,7 @@ to {opacity: 1;}
         display: block;
     } 
     .section {
-        padding: 0rem 1rem;
+        padding: 0rem 1rem 3rem 1rem;
     }
     .full-box {
         padding: 1rem;
@@ -748,12 +769,56 @@ to {opacity: 1;}
     .split-box {
         padding: 1rem;  
         min-height: 50vh;
+        min-height: auto;
     }
     .split-box-wrapper{
         flex-direction: column;
     }
     .nav-links {
         min-width: 0rem;
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .hamburger {
+        width: 2rem;
+        display: block;
+    }
+    .close-menu {
+        display: none;
+        width: 2rem;
+    }
+    .hamburger-menu {
+        display: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background:var(--black);
+        height: 100vh;
+        width: 75vw;
+        z-index: -1;
+        padding: 6rem 2rem;
+        box-sizing: border-box;
+    }
+    .hamburger-menu.active {
+        display: block;
+    }
+    .close-menu.active {
+        display: block;
+    }
+    .hamburger.active {
+        display: none;
+    }
+    .hamburger-links {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        height: 100%;
+        justify-content: center;
+    }
+    .hamburger-links .nav-link {  
+        display: block;
     }
     .nav-link {
         display: none;
@@ -762,6 +827,11 @@ to {opacity: 1;}
         width: 100vw;
         border-radius: 0;
         top: 0;
+        height: auto;
+        align-items: center;
+    }
+    .mobile img {
+        width: 100%;
     }
     .hero-title {
         width: 100%;
@@ -788,9 +858,26 @@ to {opacity: 1;}
     }
     .join-text {
         width: 100%;
-        padding: 2rem 0rem 0rem 0rem;
+        padding: 0;
+    }
+    ul {
+        padding-left: 2rem;
     }
     .join-contact {
         width: 100%;
+    }
+    .split-box.calendar {
+        width: 100%;
+        position: relative;
+        min-height: auto;
+    }
+    .split-box.events {
+        width: 100%;
+        position: relative;
+        justify-content: start;
+        min-height: auto;
+    }
+    .event-wrap {
+        flex-direction: column;
     }
 }
