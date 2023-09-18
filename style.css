@@ -390,7 +390,7 @@ p.center {
 }
 .service-tab {
     opacity: 0.3;
-    height: 3rem;
+    /* height: 3rem; */
     cursor: pointer;
 }
 .service-tab.active {
